@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="container border border-secondary border-3 rounded">
+        <h5 class="text-center   p-1">Image Editor</h5>
+        <div class="row p-1">
+            <div class="col-sm-6 d-flex align-items-center">
+                <div class="container">
+                    <div class="my-2 borderc">
+                        <label for="brightness" class="form-label">Brightness</label>
+                        <input type="range" name="brightness" class="form-range sm" min="0" max="200" value="100"
+                            id="brightness" />
+                    </div>
+                    <div class="my-2 borderc">
+                        <label for="contrast" class="form-label">Contrast</label>
+                        <input type="range" name="contrast" class="form-range" id="contrast" min="0" max="200"
+                            value="100" />
+                    </div>
+                    <div class="my-2 borderc">
+                        <label for="saturation" class="form-label">Saturation</label>
+                        <input type="range" name="saturation" class="form-range" id="saturation" min="0" max="200"
+                            value="100" />
+                    </div>
+                    <div class="my-2 borderc">
+                        <label for="grayscale" class="form-label">Grayscale</label>
+                        <input type="range" name="grayscale" class="form-range" id="grayscale" min="0" max="200"
+                            value="0" />
+                    </div>
+                    <div class="my-2 borderc">
+                        <label for="sepia" class="form-label">Sepia</label>
+                        <input type="range" name="sepia" class="form-range" id="sepia" min="0" max="200" value="0" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 p-1">
+                <div class="container d-flex justify-content-center align-items-center">
+                    <div class="container d-flex justify-content-center align-items-center" id="inputDiv">
+                    <div class="container text-center">
+                        <label for="imageinput" class="form-label text-center imglabel"><i class="fa-solid fa-upload"></i><div class="imgtxt">Uplaod Image to edit.</div></label>
+                      <input type="file" name="imagein" class="form-control p-3" hidden id="imageinput" accept="image/*">
+                    </div>
+                    </div>
+                    <div class="container d-none" id="imgDiv">
+                    <img src="" alt="Image" id="image" />
+                    <div class="p-1 text-center">
+                        <button type="button" class="btn btn-success" id="downloadbtn">Download Image</button>
+                    </div>
+                </div>
+                
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
