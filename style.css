@@ -26,11 +26,10 @@ body{
     height: 80vh !important;
 }
 .imglabel{
-    font-size: 15vh;  
-    
-    border-radius: 20% ;
-    background-image: linear-gradient(200deg, #b9efcf4b , #a1c5af9c    );
+    font-size: 15vh;   
+    border-radius: 10% ;
+    background-image: linear-gradient(200deg, #b9efcf4b , #9eceb0ce    );
 }
 .imgtxt{
-    font-size: 7vh;
+    font-size: 5vh;
 }
