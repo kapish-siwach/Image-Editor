@@ -8,6 +8,10 @@ let imageinput = document.getElementById("imageinput")
 let imgdiv = document.getElementById("imgDiv");
 let inputdiv = document.getElementById("inputDiv");
 let dbtn = document.getElementById("downloadbtn");
+let canvas = document.createElement("canvas");
+let ctx = canvas.getContext("2d");
+
+
 
 imageinput.addEventListener("change",()=>{
     
@@ -45,9 +49,14 @@ saturation.addEventListener("input", applyFilters);
 grayscale.addEventListener("input", applyFilters);
 sepia.addEventListener("input", applyFilters);
 
-dbtn.addEventListener("click",()=>{
+dbtn.addEventListener("click", () => {
+    canvas.width = image.width;
+    canvas.height = image.height;
+    ctx.filter = image.style.filter;
+    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
     let link = document.createElement("a");
-    link.href=image.src;
-    link.download="Edited_image.png";
+    link.href = canvas.toDataURL("image/png");
+    link.download = "Edited_image.png";
     link.click();
 });
